@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Domine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Domine:wght@700&family=Martel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Domine:wght@700&family=Martel:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Montserrat:wght@500&family=Red+Rose&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='simple-lightbox.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bulma.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>
+        {% if title %}
+            The {{title}}-Page
+        {% else %}
+            The Page
+        {% endif %}
+    </title>
+</head>
+<body>
+
+    <nav class="navbar is-transparent is-fixed-top">
+        <div class="container">
+            <div class="navbar-brand ">
+                <a href="#" class="navbar-item font_one">LOGO_HERE</a>
+                <div class="navbar-burger burger font_one" data-target='3dwallpanelsnavbar'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+    
+            <div id="3dwallpanelsnavbar" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="{{ url_for('home_page') }}" class="navbar-item font_one">
+                        Home
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="navbar-item font_one">
+                        Contact
+                    </a>
+                    <a href="{{ url_for('about') }}" class="navbar-item font_one">
+                        About
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="body">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/b9b7585390.js"></script>
+    <script src="{{ url_for('static', filename='apps.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/simple-lightbox.js') }}"></script>
+
+</body>
+</html> 

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!--showcasing-->
+<div id="showcasing">
+    <h1 class="title heading_one">Lorem ipsum dolor sit.</h1>
+    <p class="paragraphy_one">Lorem ipsum dolor sit amet consectg.</p>
+    <p class="paragraphy_one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+    <a href="{{ url_for('contact') }}" class="showcase_button">Contact</a>
+</div>
+
+<!--our services-->
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered pb-4">Our Service</h1>
+        <div class="columns is-10 is-centered ">
+            <div class="column column_one">
+                <h1 class="subtitle has-text-centered is-4">3d Wallpaper Panel</h1>
+                <img src="https://img.icons8.com/ios-filled/100/000000/roofing.png"/ class="">
+                <p class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam soluta architecto pariatur, consequuntur maiores tenetur officiis provident enim? Porro natus in repellat blanditiis saepe, similique quisquam id dolores nihil.
+                </p>
+            </div>
+            <div class="column column_one">
+                <h1 class="subtitle has-text-centered is-4">Venlyn Fittings</h1>
+                <img src="https://img.icons8.com/material/96/000000/closet.png"/>
+                <p class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quisquam cum, eveniet inventore nihil nostrum non quo aspernatur nemo maiores commodi ratione facilis velit molestiae laudantium. Vero id iste omnis tempore fugit aliquid qui?
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--display-->
+<section class="section">
+    <div class="container display">
+        <h1 class="title is-2 display_header">Let us give your walls a new look.</h1>
+    </div>
+</section>
+
+
+<!--about us-->
+<section class="section about_us">
+    <div class="container">
+       <div class="columns is-10 is-centered">
+           <div class="column is-half">
+               <h1 class="title has-text-centered">About Us</h1>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur corporis sunt, inventore beatae sed amet dolores et totam asperiores ducimus placeat deserunt soluta fugiat repudiandae ipsa sequi quisquam quis aut.</p>
+           </div>
+       </div>
+    </div>
+</section>
+
+<!--gallery-->
+<section class="section gallery_pics">
+    <div class="container">
+        <h1 class="title has-text-centered">Our Gallery</h1>
+        <div id="gallery">
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/seven.jpg') }}" alt="">
+            </a>
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/one.jpg') }}" alt="">
+            </a>
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/three.jpg') }}" alt="">
+            </a>
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/four.jpg') }}" alt="">
+            </a>
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/five.jpg') }}" alt="">
+            </a>
+            <a href="#" class="big">
+                <img src="{{ url_for('static', filename='images/six.jpg') }}" alt="">
+            </a>           
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer has-background-dark">
+    <div class="container">
+        <div class="content  has-text-centered has-text-white">
+            <h1 class="title has-text-white">This is the footer</h1>
+        </div>
+    </div>
+</footer>
+{% endblock content %}
